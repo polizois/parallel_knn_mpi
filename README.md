@@ -10,12 +10,12 @@ from the previous process.This way there is no need for a process to have access
 to the whole set of data at once.
 
 Two version of the program are provided :  
-  * One that uses the *blocking* MPI communication commands Recv and Send. (knn_mpi_block.c)
-  * One that uses the *non-blocking* MPI communication commands Irecv and Isend. (knn_mpi_block.c)
+  * One that uses the **blocking** MPI communication commands Recv and Send. (knn_mpi_block.c)
+  * One that uses the **non-blocking** MPI communication commands Irecv and Isend. (knn_mpi_block.c)
 
-to compile the *blocking* version run the following command :  
+to compile the **blocking** version run the following command :  
 ***mpicc ./knn_mpi_block.c -o knn_mpi_block.out -O3 -lm***  
-to compile the *non-blocking* version run the following command :  
+to compile the **non-blocking** version run the following command :  
 ***mpicc ./knn_mpi_non.c -o knn_mpi_non.out -O3 -lm***  
 
 The program takes 5 arguements to run correctly:  
@@ -36,9 +36,9 @@ These bin files are used by the program in order to confirm that its results are
 Let's assume you want to run the program on the first data set, for 5 nearest neighbours and for 4 processes.
 In order to run the program localy, if the files are positioned exactly like they are on the repo, you can run the following commands (after, of course, you have compiled) :  
 
-*blocking* version:  
+**blocking** version:  
 ***mpiexec -np 4 ./knn_mpi_block.out 60000 30 5 ./data/points_60000_30.bin ./data/labels_60000_30.bin***  
-*non-blocking* version:  
+**non-blocking** version:  
 ***mpiexec -np 4 ./knn_mpi_non.out 60000 30 5 ./data/points_60000_30.bin ./data/labels_60000_30.bin***  
 
 After the program has finished running, you sould be presentet with :  
