@@ -10,8 +10,8 @@ from the previous process.This way there is no need for a process to have access
 to the whole set of data at once.
 
 Two version of the program are provided :  
-  * One that uses the **blocking** MPI communication commands Recv and Send. (knn_mpi_block.c)
-  * One that uses the **non-blocking** MPI communication commands Irecv and Isend. (knn_mpi_block.c)
+  * One that uses the **blocking** MPI communication commands Recv and Send. (**knn_mpi_block.c**)
+  * One that uses the **non-blocking** MPI communication commands Irecv and Isend. (**knn_mpi_non.c**)
 
 to compile the **blocking** version run the following command :  
 ***mpicc ./knn_mpi_block.c -o knn_mpi_block.out -O3 -lm***  
@@ -27,13 +27,13 @@ The program takes 5 arguements to run correctly:
 
 The data folder contains the data on which the programs run.  
 There are 2 data sets :   
-  * 1 : file with 60000 points of 30 coordinates each + file with the labels of every point (points_60000_30.bin + labels_60000_30.bin)  
-  * 2 : file with 10000 points of 784 coordinates each + file with the labels of every point (points_10000_784.bin + labels_10000_784.bin)  
+  * 1 : file with 60000 points of 30 coordinates each + file with the labels of every point (**points_60000_30.bin** + **labels_60000_30.bin**)  
+  * 2 : file with 10000 points of 784 coordinates each + file with the labels of every point (**points_10000_784.bin** + **labels_10000_784.bin**)  
 
-The confirm folder contains results from knn run on matlab on both of the data sets, for 5 and 10 nearest neighbours
+The confirm folder contains results from knn run on matlab on both of the data sets, for 5 and 10 nearest neighbours.  
 These bin files are used by the program in order to confirm that its results are correct.
 
-Let's assume you want to run the program on the first data set, for 5 nearest neighbours and for 4 processes.
+Let's assume you want to run the program on the first data set, for 5 nearest neighbours and for 4 processes.  
 In order to run the program localy, if the files are positioned exactly like they are on the repo, you can run the following commands (after, of course, you have compiled) :  
 
 **blocking** version:  
