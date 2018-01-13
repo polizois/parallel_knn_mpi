@@ -245,7 +245,7 @@ int main(int argc, char *argv[])
 			printf("Points : %d / Coordinates : %d / Nearest neighbours : %d\n", pointNum, coordNum, nbrNum);
 			printf("Whole knn done in %.2f sec\n", seq_time);
 			printf("!!!! Whole match percentage : %3.1f%% !!!!\n", wholeMatch/numtasks);
-			printf("!!! Whole errors (based on matlab) : %d !!!\n", wholeErrorNum);
+			printf("!!!! Whole errors (based on matlab) : %d !!!!\n", wholeErrorNum);
 		}
 
 		MPI_Finalize();
